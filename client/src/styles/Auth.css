@@ -1,67 +1,75 @@
 .auth-container {
-    min-height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    padding: 20px;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: url('../assets/6205261.jpg');
+  background-size: cover; 
+  background-position: center; 
+  background-repeat: no-repeat; 
+  padding: 150px; 
+  background-attachment: fixed;
+}
+
+.auth-card {
+  width: 100%;
+  max-width: 400px;
+  padding: 2rem;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.2); 
+  backdrop-filter: blur(10px); 
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25); 
+  border: 1px solid rgba(255, 255, 255, 0.18); 
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+.auth-header {
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #243642;
+}
+
+.auth-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.auth-switch {
+  margin-top: 2rem;
+  text-align: center;
+  font-size: 11px;
+}
+
+.auth-switch button {
+  background: none;
+  border: none;
+  color: #F4F6FF;
+  cursor: pointer;
+  text-decoration: underline;
+  padding: 0;
+  font: inherit;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
   }
-  
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 480px) {
   .auth-card {
-    width: 100%;
-    max-width: 400px;
-    padding: 2rem;
-    border-radius: 10px;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-    background: white;
-    animation: fadeIn 0.5s ease-in-out;
+    padding: 1.5rem;
   }
-  
-  .auth-header {
-    text-align: center;
-    margin-bottom: 2rem;
-  }
-  
-  .auth-form {
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
-  }
-  
-  .form-group {
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
-  }
-  
-  .auth-switch {
-    margin-top: 1rem;
-    text-align: center;
-  }
-  
-  .auth-switch button {
-    background: none;
-    border: none;
-    color: #6366f1;
-    cursor: pointer;
-    text-decoration: underline;
-    padding: 0;
-    font: inherit;
-  }
-  
-  @keyframes fadeIn {
-    from {
-      opacity: 0;
-      transform: translateY(-20px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-  
-  @media (max-width: 480px) {
-    .auth-card {
-      padding: 1.5rem;
-    }
-  }
+}
